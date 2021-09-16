@@ -39,6 +39,13 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
+
+    private void LateUpdate()
+    {
+        _animator.SetBool("Is Moving", isMoving);
+    }
+
+
     IEnumerator MoveTowards(Vector3 destination)
     {
         isMoving = true;

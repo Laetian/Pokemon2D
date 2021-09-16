@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour
 
     private Animator _animator;
 
+    public LayerMask solidObjectsLayer;
+
     private void Awake()
     {
         _animator = GetComponent<Animator>();
@@ -35,14 +37,18 @@ public class PlayerController : MonoBehaviour
                 var targetPosition = transform.position;
                 targetPosition.x += input.x;
                 targetPosition.y += input.y;
-                StartCoroutine(MoveTowards(targetPosition));
+
+                if (IsAvailable(targetPosition))
+                {
+                    StartCoroutine(MoveTowards(targetPosition));
+                }
             }
         }
     }
 
     private void LateUpdate()
     {
-        _animator.SetBool("Is Moving", isMoving);
+        _animator.SetBool("is Moving", isMoving);
     }
 
 
@@ -56,5 +62,19 @@ public class PlayerController : MonoBehaviour
         }
         transform.position = destination;
         isMoving = false;
+    }
+
+    /// <summary>
+    /// The method checks if the next place is available for moving
+    /// </summary>
+    /// <param name="target">Location to check</param>
+    /// <returns>Returns true if it is available or flase if not</returns>
+    private bool IsAvailable(Vector3 target)
+    {
+        if(Physics2D.OverlapCircle(target, 0.30f, solidObjectsLayer)!=null)
+        {
+            return false;
+        }
+        return true;
     }
 }

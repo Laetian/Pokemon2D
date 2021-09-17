@@ -5,7 +5,7 @@
 [Bb]uilds/
 Assets/AssetStoreTools*
 
-Logs/
+Pokymon/Logs/
 
 # Visual Studio cache directory
 .vs/

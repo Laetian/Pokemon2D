@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
 
     private Animator _animator;
 
-    public LayerMask solidObjectsLayer;
+    public LayerMask solidObjectsLayer, pokemonLayer;
 
     private void Awake()
     {

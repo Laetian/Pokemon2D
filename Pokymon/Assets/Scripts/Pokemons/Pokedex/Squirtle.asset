@@ -12,16 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 540601b1ee6722d47a38a5d8a0f16129, type: 3}
   m_Name: Squirtle
   m_EditorClassIdentifier: 
-  ID: 0
-  name: 
-  description: 
-  frontSprite: {fileID: 0}
-  backSprite: {fileID: 0}
-  type1: 0
-  type2: 0
-  maxHP: 0
-  attack: 0
-  defense: 0
-  spAttack: 0
-  spDefense: 0
-  speed: 0
+  ID: 7
+  pokemonName: 
+  description: "Se protege con su caparaz\xF3n y luego contraataca lanzando agua
+    a presi\xF3n cuando tiene oportunidad."
+  frontSprite: {fileID: 21300000, guid: c02dc6ed9ca976e4384c87047eb5931c, type: 3}
+  backSprite: {fileID: 21300000, guid: d6090aeed7a5bc343966bddeae61bd57, type: 3}
+  type1: 2
+  type2: 18
+  maxHP: 44
+  attack: 48
+  defense: 65
+  spAttack: 50
+  spDefense: 64
+  speed: 43

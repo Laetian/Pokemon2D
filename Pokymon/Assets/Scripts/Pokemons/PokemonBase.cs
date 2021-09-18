@@ -6,8 +6,8 @@ using UnityEngine;
 public class PokemonBase : ScriptableObject
 {
     [SerializeField] private int ID;
-    [SerializeField] private string name;
-    public string Name => name;
+    [SerializeField] private string pokemonName;
+    public string PokemonName => pokemonName;
     [TextArea][SerializeField] private string description;
     public string Description => description;
     [SerializeField] private Sprite frontSprite;

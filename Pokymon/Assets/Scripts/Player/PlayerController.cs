@@ -62,6 +62,8 @@ public class PlayerController : MonoBehaviour
         }
         transform.position = destination;
         isMoving = false;
+
+        CheckForPokemon();
     }
 
     /// <summary>
@@ -76,5 +78,16 @@ public class PlayerController : MonoBehaviour
             return false;
         }
         return true;
+    }
+
+    private void CheckForPokemon()
+    {
+        if(Physics2D.OverlapCircle(transform.position, 0.2f, pokemonLayer)!=null)
+        {
+            if (Random.Range(0, 100)<10)
+            {
+                Debug.Log("Start pokemon bnattle");
+            }
+        }
     }
 }

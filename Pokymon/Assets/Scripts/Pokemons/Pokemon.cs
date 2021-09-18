@@ -19,4 +19,6 @@ public class Pokemon
     public int SpAttack => Mathf.FloorToInt((_pokemonBase.SpAttack* _pokemonLevel) / 100.0f) + 3;
     public int SpDefense => Mathf.FloorToInt((_pokemonBase.SpDefense * _pokemonLevel) / 100.0f) + 3;
     public int Speed => Mathf.FloorToInt((_pokemonBase.Speed * _pokemonLevel) / 100.0f) + 3;
+
+    //public List<moves> move;
 }

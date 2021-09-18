@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -30,6 +31,8 @@ public class PokemonBase : ScriptableObject
     public int SpDefense => spDefense;
     [SerializeField] private int speed;
     public int Speed => speed;
+    [SerializeField] private List<LearnableMove> learnableMoves;
+    public List<LearnableMove> LearnableMoves => learnableMoves;
 }
 
 public enum PokemonType
@@ -53,4 +56,12 @@ public enum PokemonType
     Fairy,
     Steel,
     None
+}
+[Serializable]
+public class LearnableMove
+{
+    [SerializeField] private MoveBase move;
+    public MoveBase Move => move;
+    [SerializeField] private int level;
+    public int Level => level;
 }

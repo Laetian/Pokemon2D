@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Bulbasaur
   m_EditorClassIdentifier: 
   ID: 1
-  pokemonName: 
+  pokemonName: Bulbasaur
   description: "Despu\xE9s de nacer, crece aliment\xE1ndose de las semillas de su
     lomo."
   frontSprite: {fileID: 21300000, guid: 47c6373842b60e945849663ba7fa53a3, type: 3}
@@ -26,3 +26,10 @@ MonoBehaviour:
   spAttack: 65
   spDefense: 65
   speed: 45
+  learnableMoves:
+  - move: {fileID: 11400000, guid: 9c2d414fa1c91bf489f333da5473a8b0, type: 2}
+    level: 1
+  - move: {fileID: 11400000, guid: b69018c03b8777949af16ec75c5a3c43, type: 2}
+    level: 5
+  - move: {fileID: 11400000, guid: 91221765ea6cf7b48a18767855039d4f, type: 2}
+    level: 7

@@ -5,8 +5,13 @@ using UnityEngine;
 public class HealthBar : MonoBehaviour
 {
     [SerializeField] private GameObject healthBar;
-    private void Start()
+
+    /// <summary>
+    /// Refresh the health bar from the normalized value.
+    /// </summary>
+    /// <param name="normalizedValue">Health value normalized between 0 and 1.</param>
+    public void SetHP(float normalizedValue)
     {
-        healthBar.transform.localScale = new Vector3(0.5f, 1.0f, 1.0f);
+        healthBar.transform.localScale = new Vector3(normalizedValue, 1.0f, 1.0f);
     }
 }

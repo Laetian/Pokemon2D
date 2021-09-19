@@ -5,7 +5,13 @@ using UnityEngine;
 public class Pokemon
 {
     private PokemonBase _pokemonBase;
+    public PokemonBase PokemonBase => _pokemonBase;
     private int _pokemonLevel;
+    public int PokemonLevel
+    {
+        get => _pokemonLevel;
+        set => _pokemonLevel = value;
+    }
     private int _hp;
     public int Hp
     {

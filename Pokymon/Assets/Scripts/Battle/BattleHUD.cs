@@ -23,4 +23,17 @@ public class BattleHUD : MonoBehaviour
         get => healthBar;
         set => healthBar = value;
     }
+    [SerializeField] private Text pokemonHealth;
+    private Text PokemonHealth
+    {
+        get => pokemonHealth;
+        set => pokemonHealth = value;
+    }
+    public void SetPokemonData(Pokemon pokemon)
+    {
+        pokemonName.text = pokemon.PokemonBase.PokemonName;
+        pokemonLevel.text = $"Lv: {pokemon.PokemonLevel}";
+        healthBar.SetHP(pokemon.Hp/pokemon.MaxHP);
+        pokemonHealth.text = $"{pokemon.Hp}/{pokemon.MaxHP}";
+    }
 }

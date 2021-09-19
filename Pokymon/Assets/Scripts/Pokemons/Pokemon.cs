@@ -6,11 +6,36 @@ public class Pokemon
 {
     private PokemonBase _pokemonBase;
     private int _pokemonLevel;
+    private int _hp;
+    public int Hp
+    {
+        get => _hp;
+        set => _hp = value;
+    }
+    private List<Move> _moves;
+    public List<Move> Moves
+    {
+        get => _moves;
+        set => _moves = value;
+    }
 
     public Pokemon(PokemonBase pokemonBase, int pokemonLevel)
     {
         _pokemonBase = pokemonBase;
         _pokemonLevel = pokemonLevel;
+        _hp = _pokemonBase.MaxHP;
+        _moves = new List<Move>();
+        foreach (var lMove in _pokemonBase.LearnableMoves)
+        {
+            if(lMove.Level <= _pokemonLevel)
+            {
+                _moves.Add(new Move(lMove.Move));
+            }
+            if(_moves.Count >= 4)
+            { 
+                break;
+            }
+        }
     }
 
     public int MaxHP => Mathf.FloorToInt((_pokemonBase.MaxHP * _pokemonLevel) / 100.0f) + 10;

@@ -29,7 +29,7 @@ public class Pokemon
     {
         _pokemonBase = pokemonBase;
         _pokemonLevel = pokemonLevel;
-        _hp = _pokemonBase.MaxHP;
+        _hp = MaxHP;
         _moves = new List<Move>();
         foreach (var lMove in _pokemonBase.LearnableMoves)
         {
@@ -44,7 +44,7 @@ public class Pokemon
         }
     }
 
-    public int MaxHP => Mathf.FloorToInt((_pokemonBase.MaxHP * _pokemonLevel) / 100.0f) + 10;
+    public int MaxHP => Mathf.FloorToInt((_pokemonBase.MaxHP * _pokemonLevel) / 20.0f) + 10;
     public int Attack => Mathf.FloorToInt((_pokemonBase.Attack * _pokemonLevel) / 100.0f) + 3;
     public int Defense => Mathf.FloorToInt((_pokemonBase.Defense * _pokemonLevel) / 100.0f) + 3;
     public int SpAttack => Mathf.FloorToInt((_pokemonBase.SpAttack* _pokemonLevel) / 100.0f) + 3;

@@ -202,6 +202,85 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 12732830}
   m_CullTransparentMesh: 1
+--- !u!1 &54544392
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 54544395}
+  - component: {fileID: 54544394}
+  - component: {fileID: 54544393}
+  m_Layer: 0
+  m_Name: PokemonHealth
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &54544393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 54544392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.9725491, g: 0.6431373, b: 0.16862746, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: e501c9d5decb47d43ab9cb983170796e, type: 3}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 99/99
+--- !u!222 &54544394
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 54544392}
+  m_CullTransparentMesh: 1
+--- !u!224 &54544395
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 54544392}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 326277240}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 14.02, y: -56.701}
+  m_SizeDelta: {x: 152.58, y: 30.099}
+  m_Pivot: {x: 0, y: 1}
 --- !u!1 &55488086
 GameObject:
   m_ObjectHideFlags: 0
@@ -270,7 +349,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 55488086}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!4 &55488089
 Transform:
   m_ObjectHideFlags: 0
@@ -395,6 +474,7 @@ RectTransform:
   - {fileID: 1467179091}
   - {fileID: 1533924111}
   - {fileID: 2053160394}
+  - {fileID: 54544395}
   m_Father: {fileID: 1884907427}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9529,6 +9609,7 @@ GameObject:
   - component: {fileID: 1124196830}
   - component: {fileID: 1124196832}
   - component: {fileID: 1124196831}
+  - component: {fileID: 1124196833}
   m_Layer: 0
   m_Name: PlayerPokemon
   m_TagString: Untagged
@@ -9593,6 +9674,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1124196829}
   m_CullTransparentMesh: 1
+--- !u!114 &1124196833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1124196829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08d6b01a946bdb0489afe381a4867853, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _base: {fileID: 11400000, guid: a5ac4a7e0ef9ecc458535ba617204647, type: 2}
+  _level: 1
+  isPlayer: 1
 --- !u!1 &1357008439
 GameObject:
   m_ObjectHideFlags: 0
@@ -11669,8 +11765,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1732190152}
+  - component: {fileID: 1732190153}
   m_Layer: 0
-  m_Name: Battle System
+  m_Name: Battle Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11692,6 +11789,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1732190153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1732190151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c62e6ee09a5e634d8ad882b00012db9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerUnit: {fileID: 1124196833}
+  playerHUD: {fileID: 1884907430}
 --- !u!1 &1736868300
 GameObject:
   m_ObjectHideFlags: 0
@@ -11803,8 +11914,8 @@ RectTransform:
   m_Children:
   - {fileID: 594412210}
   - {fileID: 1124196830}
-  - {fileID: 1924861770}
   - {fileID: 1884907427}
+  - {fileID: 1924861770}
   m_Father: {fileID: 1732190152}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11908,7 +12019,7 @@ RectTransform:
   - {fileID: 1736868301}
   - {fileID: 326277240}
   m_Father: {fileID: 1802714388}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -11968,6 +12079,7 @@ MonoBehaviour:
   pokemonName: {fileID: 1357008441}
   pokemonLevel: {fileID: 1736868302}
   healthBar: {fileID: 326277241}
+  pokemonHealth: {fileID: 54544393}
 --- !u!1 &1924861769
 GameObject:
   m_ObjectHideFlags: 0
@@ -11993,14 +12105,14 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1924861769}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1456383979}
   - {fileID: 670984615}
   m_Father: {fileID: 1802714388}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}

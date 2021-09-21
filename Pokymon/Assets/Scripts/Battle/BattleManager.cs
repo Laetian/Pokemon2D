@@ -6,6 +6,8 @@ public class BattleManager : MonoBehaviour
 {
     [SerializeField] private BattleUnit playerUnit;
     [SerializeField] private BattleHUD playerHUD;
+    [SerializeField] private BattleUnit enemyUnit;
+    [SerializeField] private BattleHUD enemyHUD;
 
     private void Start()
     {
@@ -15,5 +17,8 @@ public class BattleManager : MonoBehaviour
     {
         playerUnit.SetupPokemon();
         playerHUD.SetPokemonData(playerUnit.Pokemon);
+
+        playerUnit.SetupPokemon();
+        playerHUD.SetPokemonData(enemyUnit.Pokemon);
     }
 }

@@ -882,7 +882,7 @@ RectTransform:
   - {fileID: 427259794}
   - {fileID: 1615774828}
   m_Father: {fileID: 1802714388}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -12417,6 +12417,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerUnit: {fileID: 1124196833}
   playerHUD: {fileID: 1884907430}
+  enemyUnit: {fileID: 1956575917}
+  enemyHUD: {fileID: 569527822}
 --- !u!1 &1736868300
 GameObject:
   m_ObjectHideFlags: 0
@@ -12529,9 +12531,9 @@ RectTransform:
   - {fileID: 594412210}
   - {fileID: 1124196830}
   - {fileID: 1884907427}
-  - {fileID: 1924861770}
   - {fileID: 1956575916}
   - {fileID: 569527821}
+  - {fileID: 1924861770}
   m_Father: {fileID: 1732190152}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12728,7 +12730,7 @@ RectTransform:
   - {fileID: 1456383979}
   - {fileID: 670984615}
   m_Father: {fileID: 1802714388}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -12804,7 +12806,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1802714388}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}

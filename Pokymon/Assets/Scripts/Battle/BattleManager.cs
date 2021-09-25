@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class BattleManager : MonoBehaviour
 {
-    [SerializeField] private BattleUnit playerUnit;
-    [SerializeField] private BattleHUD playerHUD;
-    [SerializeField] private BattleUnit enemyUnit;
-    [SerializeField] private BattleHUD enemyHUD;
+    [SerializeField] BattleUnit playerUnit;
+    [SerializeField] BattleHUD playerHUD;
+    [SerializeField] BattleUnit enemyUnit;
+    [SerializeField] BattleHUD enemyHUD;
+
+    [SerializeField] BattleDialogBox battleDialogBox;
 
     private void Start()
     {
@@ -20,5 +22,7 @@ public class BattleManager : MonoBehaviour
 
         playerUnit.SetupPokemon();
         playerHUD.SetPokemonData(enemyUnit.Pokemon);
+
+        battleDialogBox.SetDialog($"Un {enemyUnit.Pokemon.PokemonBase.PokemonName} salvaje apareció.");
     }
 }

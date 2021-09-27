@@ -20,8 +20,8 @@ public class BattleManager : MonoBehaviour
         playerUnit.SetupPokemon();
         playerHUD.SetPokemonData(playerUnit.Pokemon);
 
-        playerUnit.SetupPokemon();
-        playerHUD.SetPokemonData(enemyUnit.Pokemon);
+        enemyUnit.SetupPokemon();
+        enemyHUD.SetPokemonData(enemyUnit.Pokemon);
 
         battleDialogBox.SetDialog($"Un {enemyUnit.Pokemon.PokemonBase.PokemonName} salvaje apareció.");
     }

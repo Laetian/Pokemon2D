@@ -10173,7 +10173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _base: {fileID: 11400000, guid: a5ac4a7e0ef9ecc458535ba617204647, type: 2}
-  _level: 1
+  _level: 6
   isPlayer: 1
 --- !u!1 &1357008439
 GameObject:
@@ -10412,8 +10412,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 31, y: -2.1600037}
-  m_SizeDelta: {x: 736.57, y: 99.1}
+  m_AnchoredPosition: {x: 31, y: 0.40000153}
+  m_SizeDelta: {x: 592.22, y: 93.99}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1456383980
 MonoBehaviour:
@@ -12841,7 +12841,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _base: {fileID: 11400000, guid: 350884b61a6d4f14d86f5d18456e1c9f, type: 2}
-  _level: 1
+  _level: 6
   isPlayer: 0
 --- !u!114 &1956575918
 MonoBehaviour:

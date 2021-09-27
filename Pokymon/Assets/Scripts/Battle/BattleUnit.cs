@@ -16,7 +16,7 @@ public class BattleUnit : MonoBehaviour
     {
         Pokemon = new Pokemon(_base, _level);
 
-            GetComponent<Image>().sprite = (isPlayer? Pokemon.PokemonBase.BackSprite: Pokemon.PokemonBase.FrontSprite);
+            GetComponent<Image>().sprite = (isPlayer? Pokemon.PokemonBase.BackSprite : Pokemon.PokemonBase.FrontSprite);
         
     }
 }

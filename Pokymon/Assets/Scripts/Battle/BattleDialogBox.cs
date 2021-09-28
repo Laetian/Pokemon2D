@@ -6,8 +6,16 @@ using UnityEngine.UI;
 public class BattleDialogBox : MonoBehaviour
 {
     public Text dialogText;
-    public void SetDialog(string message)
+
+    [SerializeField] float charactersPerSecond;
+
+    public IEnumerator SetDialog(string message)
     {
-        dialogText.text = message;
+        dialogText.text = "";
+        foreach(var character in message)
+        {
+            dialogText.text += character;
+            yield return new WaitForSeconds(1/charactersPerSecond);
+        }
     }
 }

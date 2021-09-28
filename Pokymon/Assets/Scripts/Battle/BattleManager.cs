@@ -2,6 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum BattleState 
+{
+    StartBattle,
+    PlayerSelectAction,
+    PlayerMove,
+    EnemyMove,
+    Busy
+}
+
 public class BattleManager : MonoBehaviour
 {
     [SerializeField] BattleUnit playerUnit;
@@ -11,18 +20,42 @@ public class BattleManager : MonoBehaviour
 
     [SerializeField] BattleDialogBox battleDialogBox;
 
+    public BattleState state;
+
     private void Start()
     {
-        SetupBattle();
+        StartCoroutine(SetupBattle());
     }
-    public void SetupBattle()
+    public IEnumerator SetupBattle()
     {
+        state = BattleState.StartBattle;
         playerUnit.SetupPokemon();
         playerHUD.SetPokemonData(playerUnit.Pokemon);
 
         enemyUnit.SetupPokemon();
         enemyHUD.SetPokemonData(enemyUnit.Pokemon);
 
-        StartCoroutine(battleDialogBox.SetDialog($"Un {enemyUnit.Pokemon.PokemonBase.PokemonName} salvaje apareció."));
+        yield return battleDialogBox.SetDialog($"Un {enemyUnit.Pokemon.PokemonBase.PokemonName} salvaje apareció.");
+        yield return new WaitForSeconds(1.0f);
+
+        if (enemyUnit.Pokemon.Speed > playerUnit.Pokemon.Speed)
+        {
+            StartCoroutine(battleDialogBox.SetDialog("The enemy attack fisrt!"));
+            EnemyAction();
+        }
+        else
+        {
+            PlayerAction();
+        }
+    }
+    void PlayerAction()
+    {
+        state = BattleState.PlayerSelectAction;
+        StartCoroutine(battleDialogBox.SetDialog("Select an action"));
+        battleDialogBox.ToogleActions(true);
+    }
+    void EnemyAction()
+    {
+
     }
 }

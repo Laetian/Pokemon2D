@@ -5,7 +5,16 @@ using UnityEngine.UI;
 
 public class BattleDialogBox : MonoBehaviour
 {
-    public Text dialogText;
+    [SerializeField] Text dialogText;
+    [SerializeField] GameObject actionSelect;
+    [SerializeField] GameObject movementSelect;
+    [SerializeField] GameObject movementDesc;
+
+    [SerializeField] List<Text> actionText;
+    [SerializeField] List<Text> movementText;
+
+    [SerializeField] Text ppText;
+    [SerializeField] Text typetext;
 
     [SerializeField] float charactersPerSecond;
 
@@ -17,5 +26,21 @@ public class BattleDialogBox : MonoBehaviour
             dialogText.text += character;
             yield return new WaitForSeconds(1/charactersPerSecond);
         }
+    }
+
+    public void ToggleDialogText(bool activated)
+    {
+        dialogText.enabled = activated;
+    }
+
+    public void ToogleActions(bool activated)
+    {
+        actionSelect.SetActive(activated);
+    }
+
+    public void ToogleMovements(bool activated)
+    {
+        movementSelect.SetActive(activated);
+        movementDesc.SetActive(activated);
     }
 }

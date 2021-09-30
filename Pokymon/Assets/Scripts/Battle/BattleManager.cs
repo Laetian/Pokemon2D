@@ -58,4 +58,28 @@ public class BattleManager : MonoBehaviour
     {
 
     }
+    private void Update()
+    {
+        if (state== BattleState.PlayerSelectAction)
+        {
+            HandlePlayerActionSelection();
+        }
+    }
+
+    private int currentSelectionAction;
+    [SerializeField] Color selectedColor= Color.Blue;
+    void HandlePlayerActionSelection()
+    {
+        if (Input.GetAxisRaw("Vertical"!=0)
+            {
+                if (currentSelectionAction==0)
+                    {
+                    currentSelectionAction++;
+                    }
+                else if(currentSelectionAction == 1)
+                        {
+                    currentSelectionAction--;
+                        }
+            }
+    }
 }

@@ -67,10 +67,10 @@ public class BattleManager : MonoBehaviour
     }
 
     private int currentSelectionAction;
-    [SerializeField] Color selectedColor= Color.Blue;
+    [SerializeField] Color selectedColor= Color.blue;
     void HandlePlayerActionSelection()
     {
-        if (Input.GetAxisRaw("Vertical"!=0)
+        if (Input.GetAxisRaw("Vertical")!=0)
             {
                 if (currentSelectionAction==0)
                     {
@@ -80,6 +80,9 @@ public class BattleManager : MonoBehaviour
                         {
                     currentSelectionAction--;
                         }
-            }
+            battleDialogBox.SelectAction(currentSelectionAction);
+        }
     }
+
+
 }

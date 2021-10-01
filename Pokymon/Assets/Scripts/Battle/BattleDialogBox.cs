@@ -43,4 +43,19 @@ public class BattleDialogBox : MonoBehaviour
         movementSelect.SetActive(activated);
         movementDesc.SetActive(activated);
     }
+    public void SelectAction(int selectedAction)
+    {
+        for (int i = 0; i < actionText.Count; i++)
+        {
+            if (i == selectedAction)
+            {
+                actionText[i].color = selectedColor;
+            }
+            else
+            {
+                actionText[i].color = Color.black;
+            }
+        }
+
+    }
 }

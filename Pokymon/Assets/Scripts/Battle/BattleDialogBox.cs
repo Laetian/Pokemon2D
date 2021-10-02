@@ -56,6 +56,5 @@ public class BattleDialogBox : MonoBehaviour
                 actionText[i].color = Color.black;
             }
         }
-
     }
 }

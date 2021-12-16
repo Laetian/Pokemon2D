@@ -18,6 +18,8 @@ public class BattleDialogBox : MonoBehaviour
 
     [SerializeField] float charactersPerSecond;
 
+    [SerializeField] Color selectedColor = Color.blue;
+
     public IEnumerator SetDialog(string message)
     {
         dialogText.text = "";

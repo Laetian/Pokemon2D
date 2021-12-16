@@ -66,21 +66,21 @@ public class BattleManager : MonoBehaviour
         }
     }
 
-    private int currentSelectionAction;
-    [SerializeField] Color selectedColor= Color.blue;
+    private int currentSelectedAction;
+ 
     void HandlePlayerActionSelection()
     {
         if (Input.GetAxisRaw("Vertical")!=0)
             {
-                if (currentSelectionAction==0)
+                if (currentSelectedAction==0)
                     {
-                    currentSelectionAction++;
+                    currentSelectedAction++;
                     }
-                else if(currentSelectionAction == 1)
+                else if(currentSelectedAction == 1)
                         {
-                    currentSelectionAction--;
+                    currentSelectedAction--;
                         }
-            battleDialogBox.SelectAction(currentSelectionAction);
+            battleDialogBox.SelectAction(currentSelectedAction);
         }
     }
 
